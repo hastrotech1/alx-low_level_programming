@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /*
- *main - prints/outputs a string
- *Return: gives 0
-*/
+ * main - outputs a string
+ *
+ * Return: gives zero
+ */
 
 int main(void)
 {
