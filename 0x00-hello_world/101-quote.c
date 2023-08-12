@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
 
 /**
  * main - prints a stderr
@@ -10,6 +10,6 @@
 int main(void)
 
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	system("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
