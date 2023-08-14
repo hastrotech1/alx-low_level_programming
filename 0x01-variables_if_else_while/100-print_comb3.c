@@ -16,7 +16,7 @@ int main(void)
 	{
 		for (t = '0'; t <= '9'; t++)
 		{
-			if (!(o == '9') || (t > '8'))
+			if (!((o == t) || (t > o)))
 			{
 				putchar(t);
 				putchar(o);
