@@ -9,8 +9,8 @@
 
 int main(void)
 {
-	int t;
-	int o;
+	int t = '0';
+	int o = '0';
 
 	for (o = '0'; o <= '9'; o++)
 	{
