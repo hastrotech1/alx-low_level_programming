@@ -14,10 +14,8 @@ int main(void)
 
 	for (o = '0'; o <= '9'; o++)
 	{
-		for (t = '0'; t <= '9'; t++)
+		for (t = (o + 1); t < 10; t++)
 		{
-			if (!((o == t) || (t > o)))
-			{
 				putchar(t);
 				putchar(o);
 				if (!(o == '9' && t == '8'))
@@ -25,7 +23,6 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			}
 		}
 	}
 	putchar('\n');
