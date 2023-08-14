@@ -16,13 +16,13 @@ int main(void)
 	{
 		for (t = (o + 1); t < 10; t++)
 		{
-				putchar(t);
-				putchar(o);
-				if (!(o == '9' && t == '8'))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			putchar(t);
+			putchar(o);
+			if (!(o == '9' && t == '8'))
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
