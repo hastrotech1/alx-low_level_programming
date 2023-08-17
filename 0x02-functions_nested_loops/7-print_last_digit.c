@@ -3,21 +3,24 @@
 /**
  * print_last_digit - prints last digit of a number
  *
- * @j: checks for parameters
+ * @n: checks for parameters
  *
  * Return: gives 0 as output
  */
 
-int print_last_digit(int j)
+int print_last_digit(int n)
 {
-	int k;
-	k = j;
+	int a;
 
-	if (j < 0)
-	{
-		j = k % 10;
-		k = -k;
-	}
-	_putchar(k + '0');
-	return (0);
+	if (n < 0)
+	n = -n;
+
+	a = n % 10;
+
+	if (a < 0)
+		a = -a;
+
+	_putchar(a + '0');
+	return (a);
 }
+
