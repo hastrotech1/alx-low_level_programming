@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - prints numbers form 0-9 followed by a newline
- *
+ * 
  * Return: gives 0 as output
  */
 
