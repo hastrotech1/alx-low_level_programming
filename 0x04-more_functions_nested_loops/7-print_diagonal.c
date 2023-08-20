@@ -18,10 +18,16 @@ void print_diagonal(int n)
 	{
 		for (f = 0; f < n; f++)
 		{
-			for (g = 0; g <= f; g++)
-				_putchar(' ');
-			_putchar('\\');
-			_putchar('\n');
+			for (g = 0; g < n; g++)
+			{
+				if (f == g)
+				{
+					_putchar('\\');
+				}
+				else if (g < f)
+					_putchar(' ');
+			}
+		_putchar('\n');
 		}
 	}
 }
