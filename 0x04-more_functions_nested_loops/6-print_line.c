@@ -5,7 +5,7 @@
  *
  * @n: this is the function parameter
  *
- * Return: gives 0 as output
+ * Return: If n is 0 or less, the function should only print \n 
  */
 
 void print_line(int n)
