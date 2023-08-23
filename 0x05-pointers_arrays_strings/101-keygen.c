@@ -14,7 +14,7 @@ int main(void)
 
 	tf = 0;
 	srand(time(NULL));
-	for (ffs = 0; ffs < 100; ffs + 1)
+	for (ffs = 0; ffs < 100; ffs++)
 	{
 		joe[ffs] = rand() % 78;
 		tf += (joe[ffs] + '0');
