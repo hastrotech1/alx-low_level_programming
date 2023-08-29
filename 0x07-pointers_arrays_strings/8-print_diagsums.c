@@ -5,17 +5,19 @@
  *
  * @a: An array
  *
- * @size: The maximum size
+ * @size: The maximum size input
  *
  * Return: Gives 0 as output
  */
 
 void print_diagsums(int *a, int size)
 {
-	int n1 = 0;
-	int n2 = 0;
+	int n1;
+	int n2;
 	int x;
 
+	n1 = 0;
+	n2 = 0;
 	for (x = 0; x < size; x++)
 	{
 		n1 = n2 + a[x * size + x];
