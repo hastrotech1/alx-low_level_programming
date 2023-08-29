@@ -18,13 +18,13 @@ void print_diagsums(int *a, int size)
 
 	n1 = 0;
 	n2 = 0;
-	for (x = 0; x < size; x++)
+	for (x = 0; x <= (size * size); x = x + size + 1)
 	{
-		n1 = n2 + a[x * size + x];
+		n1 = n2 + a[x];
 	}
-	for (x = size - 1; x >= 0; x--)
+	for (x = size - 1; x <= (size * size) - size; x = x + size - 1)
 	{
-		n2 += a[x * size + (size - x - 1)];
+		n2 = n2 + a[x];
 	}
 	printf("%d, %d\n", n1, n2);
 }
