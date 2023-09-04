@@ -1,27 +1,24 @@
 #include "main.h"
 
 /**
- * _strncat - function concatenates two strings
+ * _strchr - This function locates the string
  *
- * @dest: A pointer to the destination string.
+ * @s: The pointer string
  *
- * @src: A pointer to the source string.
+ * @c: The string pointed to
  *
- * @n: The maximum number of bytes
- *
- * Return: gives dest as output.
+ * Return: gives c in the string s or NULL
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strchr(char *s, char c)
 {
-	int l = strlen(dest);
-	int k;
-
-	for (k = 0; k < n && *src != '\0'; k++)
+	while (*s != '\0')
 	{
-		dest[l + k] = *src;
-		src++;
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	dest[l + k] = '\0';
-	return (dest);
+	if (*s == c)
+		return (s);
+	return (0);
 }

@@ -1,28 +1,22 @@
 #include "main.h"
 
 /**
- * _strcmp - Function compares two strings.
+ * _memset - This function fills the memory with a constant byte.
  *
- * @s1: A pointer to the first string.
+ * @s: The pointer
  *
- * @s2: A pointer to the second string.
+ * @b: The integer
  *
- * Return: gives 0 as output
+ * @n: The maximum number of bytes stored
+ *
+ * Return: gives s as output
  */
 
-int _strcmp(char *s1, char *s2)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int g;
+	unsigned int v;
 
-	for (g = 0; s1[g] != '\0' || s2[g] != '\0'; g++)
-	{
-		if (s1[g] != s2[g])
-		{
-			if (s1[g] < s2[g])
-				return (s1[g] - s2[g]);
-			else if (s2[g] < s1[g])
-				return (s1[g] - s2[g]);
-		}
-	}
-	return (0);
+	for (v = 0; v < n; v++)
+		s[v] = b;
+	return (s);
 }

@@ -1,26 +1,28 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
- * _strspn - This function gets the lenght prefix of a substring
+ * _strpbrk - This function searches a string of any set of bytes
  *
- * @s: The pointer string
+ * @s: The function pointer
  *
- * @accept: Parameter to be checked
+ * @accept: The pointer to the sting
  *
- * Return: gives 0 as output
+ * Return: gives '\0' as output
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int e, y;
+	int van;
 
-	for (e = 0; s[e] != '\0'; e++)
+	while (*s)
 	{
-		for (y = 0; s[e] != accept[y]; y++)
+		for (van = 0; accept[van]; van++)
 		{
-			if (accept[y] == '\0')
-				return (e);
+			if (*s  == accept[van])
+				return (s);
 		}
+		s++;
 	}
-	return (0);
+	return (NULL);
 }

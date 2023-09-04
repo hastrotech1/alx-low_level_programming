@@ -1,24 +1,26 @@
 #include "main.h"
 
 /**
- * _strchr - This function locates the string
+ * _strspn - This function gets the lenght prefix of a substring
  *
  * @s: The pointer string
  *
- * @c: The string pointed to
+ * @accept: Parameter to be checked
  *
- * Return: gives c in the string s or NULL
+ * Return: gives 0 as output
  */
 
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
-	while (*s != '\0')
+	int e, y;
+
+	for (e = 0; s[e] != '\0'; e++)
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		for (y = 0; s[e] != accept[y]; y++)
+		{
+			if (accept[y] == '\0')
+				return (e);
+		}
 	}
-	if (*s == c)
-		return (s);
 	return (0);
 }

@@ -1,28 +1,29 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
- * _strpbrk - This function searches a string of any set of bytes
+ * _strstr - This function finds the first occurence of the substring needle
  *
- * @s: The function pointer
+ * @haystack: The pointer of the function
  *
- * @accept: The pointer to the sting
+ * @needle: The source of the pointer
  *
- * Return: gives '\0' as output
+ * Return: Gives 0 if substring is not foun
  */
 
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	int van;
-
-	while (*s)
+	for (; *haystack != '\0'; haystack++)
 	{
-		for (van = 0; accept[van]; van++)
+		char *p1 = haystack;
+		char *p2 = needle;
+
+		while (*p1 == *p2 && *p2 != '\0')
 		{
-			if (*s  == accept[van])
-				return (s);
+			p1++;
+			p2++;
 		}
-		s++;
+		if (*p2 == '\0')
+			return (haystack);
 	}
-	return (NULL);
+	return (0);
 }
