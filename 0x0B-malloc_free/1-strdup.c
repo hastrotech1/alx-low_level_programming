@@ -22,7 +22,7 @@ char *_strdup(char *str)
 
 	if (bat_man == NULL)
 		return (NULL);
-	for (thor = 0; str[thor] != '\0'; thor = thor + 1)
+	for (thor = 0; str[thor] != '\0'; thor++)
 		flash++;
 	for (thor = 0; str[thor] != '\0'; thor++)
 		bat_man[thor] = str[thor];
