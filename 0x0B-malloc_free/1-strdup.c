@@ -17,13 +17,11 @@ char *_strdup(char *str)
 	flash = 0;
 	if (str == NULL)
 		return (NULL);
-
+	for (thor = 0; str[thor] != '\0'; thor = thor + 1)
+		flash++;
 	bat_man = malloc(sizeof(char) * flash + 1);
-
 	if (bat_man == NULL)
 		return (NULL);
-	for (thor = 0; str[thor] != '\0'; thor++)
-		flash++;
 	for (thor = 0; str[thor] != '\0'; thor++)
 		bat_man[thor] = str[thor];
 	return (bat_man);
