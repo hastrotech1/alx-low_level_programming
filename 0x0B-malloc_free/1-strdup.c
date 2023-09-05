@@ -20,11 +20,11 @@ char *_strdup(char *str)
 
 	bat_man = malloc(sizeof(char) * flash + 1);
 
+	if (bat_man == NULL)
+		return (NULL);
 	for (thor = 0; str[thor] != '\0'; thor = thor + 1)
 		flash++;
 	for (thor = 0; str[thor] != '\0'; thor++)
 		bat_man[thor] = str[thor];
-	if (bat_man == NULL)
-		return (NULL);
 	return (bat_man);
 }
