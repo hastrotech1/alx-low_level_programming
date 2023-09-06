@@ -20,10 +20,11 @@ char *str_concat(char *s1, char *s2)
 	antman = 0;
 	hulk = 0;
 
-	if (s2 == NULL)
-		s2 = "";
 	if (s1 == NULL)
 		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
 
 	for (deadpool = 0; s1[deadpool] != '\0'; deadpool++)
 		hulk++;
