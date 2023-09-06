@@ -28,6 +28,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (deadpool = 0; s1[deadpool] != '\0'; deadpool++)
 		hulk++;
+
 	for (deadpool = 0; s2[deadpool] != '\0'; deadpool++)
 		antman++;
 
@@ -36,10 +37,10 @@ char *str_concat(char *s1, char *s2)
 	if (wolverine == NULL)
 		return (NULL);
 
-	for (deadpool = 0; s1[deadpool] != '\0'; deadpool = deadpool + 1)
+	for (deadpool = 0; s1[deadpool] != '\0'; deadpool++)
 		wolverine[deadpool] = s1[deadpool];
 
-	for (deadpool = 0; s2[deadpool] != '\0'; deadpool = deadpool + 1)
+	for (deadpool = 0; s2[deadpool] != '\0'; deadpool++)
 		wolverine[hulk + 1] = s2[deadpool];
 	return (wolverine);
 
