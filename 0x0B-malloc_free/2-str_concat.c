@@ -37,11 +37,11 @@ char *str_concat(char *s1, char *s2)
 	if (wolverine == NULL)
 		return (NULL);
 
-	for (deadpool = 0; s1[deadpool] != '\0'; deadpool++)
+	for (deadpool = 0; s1[deadpool] != '\0'; deadpool = deadpool + 1)
 		wolverine[deadpool] = s1[deadpool];
 
-	for (deadpool = 0; s2[deadpool] != '\0'; deadpool++)
-		wolverine[hulk + 1] = s2[deadpool];
+	for (deadpool = 0; s2[deadpool] != '\0'; deadpool = deadpool + 1)
+		wolverine[hulk + deadpool] = s2[deadpool];
 	return (wolverine);
 
 }
