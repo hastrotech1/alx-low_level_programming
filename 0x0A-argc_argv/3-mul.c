@@ -17,30 +17,29 @@ int _atoi(char *venom)
 	int idgf = 0;
 	int dfkm = 0;
 
-	for (zen = 0; venom[zen] != '\0'; zen++)
+	while (venom[zen] != '\0')
+		zen++;
+	while (idgf < zen && optimistic == 0)
 	{
-		while (idgf < zen && optimistic == 0)
-		{
-			if (venom[idgf] == '-')
-				moreles++;
+		if (venom[idgf] == '-')
+			moreles++;
 
-			if (venom[idgf] >= '0' && venom[idgf] <= '9')
-			{
-				dfkm = venom[idgf] - '0';
-				if (moreles % 2)
-					dfkm = -dfkm;
-				scarlet = scarlet * 10 + dfkm;
-				optimistic = 1;
-				if (venom[idgf + 1] < '0' || venom[idgf + 1] > '9')
-					break;
-				optimistic = 0;
-			}
-			idgf++;
+		if (venom[idgf] >= '0' && venom[idgf] <= '9')
+		{
+			dfkm = venom[idgf] - '0';
+			if (moreles % 2)
+				dfkm = -dfkm;
+			scarlet = scarlet * 10 + dfkm;
+			optimistic = 1;
+			if (venom[idgf + 1] < '0' || venom[idgf + 1] > '9')
+				break;
+			optimistic = 0;
 		}
+		idgf++;
 	}
-		if (optimistic == 0)
-			return (0);
-		return (scarlet);
+	if (optimistic == 0)
+		return (0);
+	return (scarlet);
 }
 
 /**
