@@ -19,6 +19,7 @@ int _atoi(char *venom)
 
 	while (venom[zen] != '\0')
 		zen++;
+
 	while (idgf < zen && optimistic == 0)
 	{
 		if (venom[idgf] == '-')
