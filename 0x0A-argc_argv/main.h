@@ -4,6 +4,6 @@
 #include <stdlib.h>
 
 int _putchar(char c);
-int marvel(char *venom);
+int _atoi(char *venom);
 
 #endif

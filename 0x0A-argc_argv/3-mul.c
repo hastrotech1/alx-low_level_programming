@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * marvel - This function converts the string to an integer
+ * _atoi - This function converts the string to an integer
  *
  * @venom: This is the string to be converted
  *
  * Return: Gives int from the string
  */
 
-int marvel(char *venom)
+int _atoi(char *venom)
 {
 	int scarlet = 0;
 	int optimistic = 0;
@@ -65,8 +65,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	utah = marvel(argv[1]);
-	scar = marvel(argv[2]);
+	utah = _atoi(argv[1]);
+	scar = _atoi(argv[2]);
 	simba = utah * scar;
 
 	printf("%d\n", simba);
