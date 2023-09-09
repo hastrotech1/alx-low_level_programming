@@ -25,7 +25,7 @@ int *array_range(int min, int max)
 	if (chase == NULL)
 		return (NULL);
 
-	for (vision = 0; vision < 1; vision++)
+	for (vision = 0; vision < flash; vision++)
 	{
 		chase[vision] = min;
 		min++;
