@@ -42,7 +42,8 @@ char *_strcpy(char *dest, char *src)
 
 	odin = 0;
 
-	for (odin = 0; src[odin] != '\0'; odin++)
+	while (src[odin] != '\0')
+		odin++;
 
 	for (meta = 0; meta < odin; meta++)
 	{
