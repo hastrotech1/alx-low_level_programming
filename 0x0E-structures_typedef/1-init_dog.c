@@ -7,7 +7,9 @@
  *
  * @name: The character
  *
- * @age: The float vaariable
+ * @age: The float variable
+ *
+ * @owner: The owner variable
  *
  * Return: Gives 0 as output
  */
