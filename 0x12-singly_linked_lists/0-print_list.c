@@ -4,6 +4,8 @@
  * print_list - This function prints all the elements of a list_t list
  *
  * @h: The node pointer
+ *
+ * Return: Gives firstNode as output
  */
 
 size_t print_list(const list_t *h)
