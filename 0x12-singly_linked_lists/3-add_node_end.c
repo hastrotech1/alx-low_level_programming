@@ -15,7 +15,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *add_node, *tempo;
 	unsigned int loop = 0;
 
-	add_node = malloc(sizeof (list_t));
+	add_node = malloc(sizeof(list_t));
 	if (add_node == NULL)
 		return (NULL);
 
@@ -27,7 +27,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	add_node->len = loop;
 	add_node->next = NULL;
 	tempo = *head;
-	
+
 	if (tempo == NULL)
 	{
 		*head = add_node;
