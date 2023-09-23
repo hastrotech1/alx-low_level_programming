@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * count_word - The helper function
+ * word - The helper function
  *
- * @s: The string to evaluate in the function
+ * @count: The string to evaluate in the function
  *
  * Return: Gives the total number of words as output
  */
 
 int word(char *count)
 {
-	int loop, check, i;
-
-	loop = 0;
-	i = 0;
+	int loop = 0, check = 0, i;
 
 	for (check = 0; count[check] != '\0'; check++)
 	{
@@ -25,7 +22,6 @@ int word(char *count)
 			i++;
 		}
 	}
-
 	return (i);
 }
 
@@ -45,17 +41,12 @@ char **strtow(char *str)
 
 	while (*(str + str_len))
 		str_len++;
-
 	words = word(str);
-
 	if (words == 0)
 		return (NULL);
-
 	m = (char **) malloc(sizeof(char *) * (words + 1));
-
 	if (m == NULL)
 		return (NULL);
-
 	for (o = 0; o <= str_len; o++)
 	{
 		if (str[o] == ' ' || str[o] == '\0')
@@ -63,15 +54,11 @@ char **strtow(char *str)
 			if (c)
 			{
 				end = o;
-
 				t = (char *) malloc(sizeof(char) * (c + 1));
-
 				if (t == NULL)
 					return (NULL);
-
 				while (start < end)
 					*t++ = str[start++];
-
 				*t = '\0';
 				m[k] = t - c;
 				k++;
