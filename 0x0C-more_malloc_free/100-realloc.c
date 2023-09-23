@@ -3,7 +3,7 @@
 
 /**
 * _realloc - Function realocates memory
-* 
+*
 * @ptr: initail pointer to the malloc address
 *
 * @old_size: size of the intial pointer
