@@ -10,11 +10,11 @@
 
 void free_listint(listint_t *head)
 {
-	listint_t *free_list = head;
-
-	while (!head)
+	listint_t *free_list;
+	while (head != NULL)
 	{
-		head = head->next;
-		free(free_list);
+		free_list = head->next;
+		head = free_list;
+		free(head);
 	}
 }
