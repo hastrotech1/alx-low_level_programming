@@ -15,6 +15,10 @@ int pop_listint(listint_t **head)
 
 	if (head != NULL || *head != 0)
 	{
+		return (0);
+	}
+	else
+	{
 		num_count = (*head)->n;
 		del_head = (*head)->next;
 		free(*head);
