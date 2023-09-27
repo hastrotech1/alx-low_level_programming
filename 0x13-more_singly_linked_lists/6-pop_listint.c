@@ -13,7 +13,7 @@ int pop_listint(listint_t **head)
 	listint_t *del_head;
 	int num_count;
 
-	if (head != NULL && *head != 0)
+	if (head != NULL || *head != 0)
 	{
 		num_count = (*head)->n;
 		del_head = (*head)->next;
