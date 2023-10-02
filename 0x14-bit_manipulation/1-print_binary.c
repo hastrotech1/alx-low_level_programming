@@ -3,7 +3,7 @@
 /**
  * print_binary - This function Prints the binary rep number
  *
- * @n: 	The number of binary to be printed
+ * @n: The number of binary to be printed
  */
 
 void print_binary(unsigned long int n)
