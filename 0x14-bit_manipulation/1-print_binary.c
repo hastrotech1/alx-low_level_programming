@@ -1,20 +1,33 @@
 #include "main.h"
 
 /**
- * get_bit - Returns the value of a bit at a given index
- * @n: Integer number
- * @index: Given index number
- *
- * Return: Value of the bit at index
- *	(-1) if an error occurred
- */
+* print_binary - this function converts an unsigned int to binary.
+* @n: unsinged integer to be converted to binary.
+* Return: void.
+*/
 
-int get_bit(unsigned long int n, unsigned int index)
+void print_binary(unsigned long int n)
 {
-	if (index >= sizeof(unsigned long int) * 8)
+	unsigned long int j;
+
+	bool num = false;
+
+	for (j = 1UL << (sizeof(unsigned long int) * 8 - 1); j; j >>= 1)
 	{
-		return (-1);
+		if (n & j)
+		{
+			num = true;
+
+			_putchar('1');
+		}
+		else if (num)
+		{
+			_putchar('0');
+		}
 	}
 
-	return ((n >> index) & 1);
+	if (num != true)
+	{
+		_putchar('0');
+	}
 }
